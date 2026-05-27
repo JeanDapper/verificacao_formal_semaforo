@@ -1,0 +1,28 @@
+# Compilador
+CC = gcc
+
+# Flags
+CFLAGS = -Wall -Wextra -std=c11 -Iunity -Isrc
+
+# Arquivos fonte
+SRC = src/sinaleiro2.c unity/unity.c
+TEST = test/test_sinaleiro2.c
+
+# Saída
+OUT = build/test_runner
+
+# Regra padrão
+all: $(OUT)
+
+# Build
+$(OUT): $(SRC) $(TEST)
+	mkdir -p build
+	$(CC) $(CFLAGS) -DUNIT_TEST $(SRC) $(TEST) -o $(OUT)
+
+# Rodar testes
+run: all
+	./$(OUT)
+
+# Limpar build
+clean:
+	rm -rf build
