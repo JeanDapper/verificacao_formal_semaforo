@@ -595,9 +595,10 @@ int main(void)
     RUN_TEST(test_C21_emergency_should_stay);
     RUN_TEST(test_C22_invalid_should_go_emergency);
 
-    return UNITY_END();
+    printf("Programa executado!\n");
 
     printf("Pressione ENTER para sair...");
     getchar();
-    return 0;
+
+    return UNITY_END();
 }

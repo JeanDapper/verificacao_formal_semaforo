@@ -606,201 +606,201 @@ system Botao_emergencia, Botao_pedestre, Controlador, Semaforo_pedestre, Semafor
 		<query>
 			<formula>/* RF-01A */ E&lt;&gt; Semaforo_A.RED </formula>
 			<comment>RF-01A - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01B */ E&lt;&gt; Semaforo_A.GREEN</formula>
 			<comment>RF-01B - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01C */ E&lt;&gt; Semaforo_A.YELLOW</formula>
 			<comment>RF-01C - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01D */ E&lt;&gt; Semaforo_B.RED </formula>
 			<comment>RF-01D - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01E */ E&lt;&gt; Semaforo_B.GREEN</formula>
 			<comment>RF-01E - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
-			<formula>/* RF-01F */ E&lt;&gt; Semaforo_A.YELLOW</formula>
+			<formula>/* RF-01F */ E&lt;&gt; Semaforo_B.YELLOW</formula>
 			<comment>RF-01F - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01G */ E&lt;&gt; Semaforo_pedestre.RED </formula>
 			<comment>RF-01G - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-01H */ E&lt;&gt; Semaforo_pedestre.GREEN</formula>
 			<comment>RF-01H - O sistema deve controlar 3 semáforos independentes, sendo um associado à Rua A, outro associado à Rua B, outro associado ao sinaleiro dos pedestres</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-02 */ A[] ( Controlador.STATE_INIT imply Semaforo_A.RED &amp;&amp; Semaforo_B.RED &amp;&amp; Semaforo_pedestre.RED )</formula>
 			<comment>RF-02 - O sistema deve iniciar sua operação com todos os sinaleiros em vermelho</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-03A */ E&lt;&gt; Controlador.STATE_A_GREEN imply not Controlador.STATE_B_GREEN</formula>
 			<comment>RF-03A - O sistema deve alternar automaticamente o direito de passagem entre Rua A e Rua B</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-03B */ E&lt;&gt; Controlador.STATE_B_GREEN imply not Controlador.STATE_A_GREEN</formula>
 			<comment>RF-03B - O sistema deve alternar automaticamente o direito de passagem entre Rua A e Rua B</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-04A */ A[] not (Semaforo_A.GREEN &amp;&amp; Semaforo_B.GREEN)</formula>
 			<comment>RF-04A - Nunca dois verdes simultâneos - O sistema deve garantir que apenas uma rua possua sinal verde por vez</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-04B */ A[] not (Semaforo_A.GREEN &amp;&amp; Semaforo_B.GREEN &amp;&amp; Semaforo_pedestre.GREEN)</formula>
 			<comment>RF-04B - Nunca dois verdes simultâneos - O sistema deve garantir que apenas uma rua possua sinal verde por vez</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-05A */ A[] (Controlador.STATE_ALL_RED_TO_B imply visitedStateAYellow == true)</formula>
-			<comment>RF-05A — Verde sempre passa por amarelo antes de vermelho A - O sistema deve possuir para os sinaleiros associados a rua A e B um estado amarelo antes da troca do semáforo para vermelho AINDA NAOOOOOOOO FUNCIONAAAAAAA</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<comment>RF-05A — Verde sempre passa por amarelo antes de vermelho A - O sistema deve possuir para os sinaleiros associados a rua A e B um estado amarelo antes da troca do semáforo para vermelho</comment>
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-05B */ A[] (Controlador.STATE_ALL_RED_TO_A_CMM imply visitedStateBYellow == true)</formula>
-			<comment>RF-05B — Verde sempre passa por amarelo antes de vermelho B - O sistema deve possuir para os sinaleiros associados a rua A e B um estado amarelo antes da troca do semáforo para vermelho AINDA NAOOOOOOOO FUNCIONAAAAAAA</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<comment>RF-05B — Verde sempre passa por amarelo antes de vermelho B - O sistema deve possuir para os sinaleiros associados a rua A e B um estado amarelo antes da troca do semáforo para vermelho</comment>
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-06A */ A[] ( Controlador.STATE_A_YELLOW and gStateTimer &lt; TIME_YELLOW_A imply not Controlador.STATE_ALL_RED_TO_B )</formula>
 			<comment>RF-06A - Tempo amarelo configurado para rua A- O estado amarelo deve permanecer ativo durante um intervalo de tempo configurado</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
-			<formula>/* RF-06B */ A[] ( Controlador.STATE_B_YELLOW and gStateTimer &lt; TIME_YELLOW_B imply not Controlador.STATE_ALL_RED_TO_A_CMM )</formula>
+			<formula>/* RF-06B */ A[] ( Controlador.STATE_B_YELLOW &amp;&amp; gStateTimer &lt; TIME_YELLOW_B imply not Controlador.STATE_ALL_RED_TO_A_CMM )</formula>
 			<comment>RF-06B - Tempo amarelo configurado para rua B - O estado amarelo deve permanecer ativo durante um intervalo de tempo configurado</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-07A */ A[] (Controlador.STATE_ALL_RED_TO_B imply Semaforo_A.RED &amp;&amp; Semaforo_B.RED)</formula>
-			<comment>RF-07A — All red após amarelo A - Após o estado amarelo, o sistema deve colocar ambos os semáforos em vermelho durante um intervalo de segurança</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<comment>RF-07A - All red após amarelo A - Após o estado amarelo, o sistema deve colocar ambos os semáforos em vermelho durante um intervalo de segurança</comment>
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-07B */ A[] (Controlador.STATE_ALL_RED_TO_A_CMM imply Semaforo_A.RED &amp;&amp; Semaforo_B.RED)</formula>
-			<comment>RF-07B — All red após amarelo - Após o estado amarelo, o sistema deve colocar ambos os semáforos em vermelho durante um intervalo de segurança</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<comment>RF-07B - All red após amarelo - Após o estado amarelo, o sistema deve colocar ambos os semáforos em vermelho durante um intervalo de segurança</comment>
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-10A */ E&lt;&gt; Botao_pedestre.OFF</formula>
-			<comment>RF-10B - O sistema deve possuir um botão de solicitação de travessia de pedestres localizados nos cantos do cruzamento</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<comment>RF-10A - O sistema deve possuir um botão de solicitação de travessia de pedestres localizados nos cantos do cruzamento</comment>
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-10B */ E&lt;&gt; Botao_pedestre.ON</formula>
 			<comment>RF-10B - O sistema deve possuir um botão de solicitação de travessia de pedestres localizados nos cantos do cruzamento</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-11 */ A[] ( Botao_pedestre.ON imply gPedestrianRequest == true )</formula>
 			<comment>RF-11 - Pedido pedestre registrado - Quando um botão de pedestre for pressionado, o sistema deve registrar a solicitação de travessia</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
-			<formula>/* RF-12 */ A[] (Semaforo_pedestre.GREEN imply (Semaforo_A.RED and Semaforo_B.RED))</formula>
+			<formula>/* RF-12 */ A[] (Semaforo_pedestre.GREEN imply (Semaforo_A.RED &amp;&amp; Semaforo_B.RED))</formula>
 			<comment>RF-12 - Pedestre só após ciclo seguro - O sistema deve atender solicitações de travessia somente após o encerramento seguro do ciclo atual de veículos
 </comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
-			<formula>/* RF-13 */ A[] (Semaforo_pedestre.GREEN imply (Semaforo_A.RED and Semaforo_B.RED))</formula>
+			<formula>/* RF-13 */ A[] (Semaforo_pedestre.GREEN imply (Semaforo_A.RED &amp;&amp; Semaforo_B.RED))</formula>
 			<comment>RF-13 - Durante travessia ambos vermelhos - Durante a travessia de pedestres, ambos os semáforos de veículos devem permanecer em vermelho</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-15 */ A[] ((Controlador.STATE_A_GREEN &amp;&amp; visitedStatePedestrian == true) imply visitedStatePedestrian == true)</formula>
 			<comment>RF-15 - Sistema retorna ao tráfego normal- Após o término da travessia de pedestres, o sistema deve retornar automaticamente ao controle normal do tráfego</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-16A */ E&lt;&gt; Botao_emergencia.OFF</formula>
 			<comment>RF-16A - O sistema deve possuir um botão dedicado ao acionamento do modo emergência/manutenção</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-16B */ E&lt;&gt; Botao_emergencia.ON</formula>
 			<comment>RF-16B - O sistema deve possuir um botão dedicado ao acionamento do modo emergência/manutenção</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-17 */ A[] (gEmergencyActive imply Controlador.STATE_EMERGENCY)</formula>
 			<comment>RF-17 - O sistema deve concluir a transição segura do estado atual antes de entrar em emergência</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
-			<formula>/* RF-18 */ A[] (Controlador.STATE_EMERGENCY imply (Semaforo_A.RED and Semaforo_B.RED and Semaforo_pedestre.RED))</formula>
+			<formula>/* RF-18 */ A[] (Controlador.STATE_EMERGENCY imply (Semaforo_A.RED &amp;&amp; Semaforo_B.RED &amp;&amp; Semaforo_pedestre.RED))</formula>
 			<comment>RF-18 - Emergência tudo vermelho - Durante o modo emergência/manutenção, todos os semáforos devem permanecer em vermelho</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-19 */ A[] (Controlador.STATE_EMERGENCY imply not Controlador.STATE_A_GREEN)</formula>
 			<comment>RF-19 - Sem transições automáticas na emergência - Durante o modo emergência/manutenção, nenhuma transição automática de estados deve ocorrer</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-20 */ (not gEmergencyActive &amp;&amp; Controlador.STATE_EMERGENCY) --&gt; Controlador.STATE_INIT</formula>
 			<comment>RF-20 - Quando o modo emergência/manutenção for desativado, o sistema deve reiniciar sua operação a partir do estado inicial configurado.</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-21 */ A[] not deadlock</formula>
 			<comment>RF-21 - Execução infinita - O sistema deve operar em execução cíclica infinita</comment>
-			<result outcome="success" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="success" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 		<query>
 			<formula>/* RF-23 */ A[] Controlador.STATE_PEDESTRIAN imply (gCycleACompleted == true &amp;&amp; gCycleBCompleted == true)
 </formula>
 			<comment>RF-23 - Fairness do pedestre - O sistema deve garantir que, após uma travessia de pedestres, pelo menos um ciclo de liberação da Rua A e um ciclo de liberação da Rua B ocorram antes que uma nova solicitação de travessia de pedestres seja atendida</comment>
-			<result outcome="failure" type="quality" timestamp="2026-05-26 17:11:56 -0300">
+			<result outcome="failure" type="quality" timestamp="2026-05-27 10:55:55 -0300">
 			</result>
 		</query>
 	</queries>
